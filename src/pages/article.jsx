@@ -19,7 +19,7 @@ const Article = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`https://trend-backend.onrender.com/topic/${id}/article/${article_id}`);
+                const response = await axios.get(`https://trend-backend-b3ov.onrender.com/topic/${id}/article/${article_id}`);
                 console.log("this is response==>", response.data);
                 setData(response.data);
             } catch (err) {

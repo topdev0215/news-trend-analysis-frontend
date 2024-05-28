@@ -25,7 +25,7 @@ export default function FloatingActionButtonSize({ reload, setReload, setLoading
         try {
             setLoading(true); // Start loading
             setOpen(false);
-            const response = await axios.put(`https://trend-backend.onrender.com/topic`, {
+            const response = await axios.put(`https://trend-backend-b3ov.onrender.com/topic`, {
                 'topic': topic
             });
             console.log('Download started for topic:', response.data);

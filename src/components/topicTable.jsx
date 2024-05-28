@@ -21,7 +21,7 @@ const TopicTable = ({ id, topic }) => {
         // Fetch data here and set it in state
         const fetchData = async () => {
             try {
-                const response = await axios.get(`https://trend-backend.onrender.com/topic/${id}`);
+                const response = await axios.get(`https://trend-backend-b3ov.onrender.com/topic/${id}`);
                 console.log("this is response==>", response.data);
                 setData(response.data);
             } catch (err) {
