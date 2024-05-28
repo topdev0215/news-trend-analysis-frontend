@@ -30,7 +30,6 @@ const Graph = () => {
         fetchData();
     }, []);
 
-
     return (
         <>
             <div className='text-center text-4xl font-sans text-sky-600 mt-10'>
