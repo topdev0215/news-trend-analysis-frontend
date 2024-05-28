@@ -19,12 +19,7 @@ const Graph = () => {
         // Fetch data here and set it in state
         const fetchData = async () => {
             try {
-                const response = await axios.get(`https://gull-upright-actively.ngrok-free.app/topic/${id}`,
-                    {
-                        headers: {
-                            'ngrok-skip-browser-warning': 'true' // You can set this to any value
-                        }
-                    });
+                const response = await axios.get(`https://trend-backend.onrender.com/topic/${id}`);
                 console.log("this is response==>", response.data);
                 setData(response.data);
             } catch (err) {

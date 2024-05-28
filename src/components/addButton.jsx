@@ -25,14 +25,9 @@ export default function FloatingActionButtonSize({ reload, setReload, setLoading
         try {
             setLoading(true); // Start loading
             setOpen(false);
-            const response = await axios.put(`https://gull-upright-actively.ngrok-free.app/topic`, {
+            const response = await axios.put(`https://trend-backend.onrender.com/topic`, {
                 'topic': topic
-            },
-                {
-                    headers: {
-                        'ngrok-skip-browser-warning': 'true' // You can set this to any value
-                    }
-                });
+            });
             console.log('Download started for topic:', response.data);
             setStatus(response.data.message);
             setSeverity('success');

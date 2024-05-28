@@ -19,12 +19,7 @@ const Article = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`https://gull-upright-actively.ngrok-free.app/topic/${id}/article/${article_id}`,
-                    {
-                        headers: {
-                            'ngrok-skip-browser-warning': 'true' // You can set this to any value
-                        }
-                    });
+                const response = await axios.get(`https://trend-backend.onrender.com/topic/${id}/article/${article_id}`);
                 console.log("this is response==>", response.data);
                 setData(response.data);
             } catch (err) {

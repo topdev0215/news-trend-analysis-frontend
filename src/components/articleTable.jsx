@@ -18,13 +18,10 @@ const TopicTable = ({ id, month }) => {
         // Fetch data here and set it in state
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://gull-upright-actively.ngrok-free.app/articles', {
+                const response = await axios.get('https://trend-backend.onrender.com/articles', {
                     params: {
                         id: id,
                         month: month
-                    },
-                    headers: {
-                        'ngrok-skip-browser-warning': 'true' // You can set this to any value
                     }
                 });
                 console.log("this is response==>", response.data);

@@ -23,12 +23,7 @@ const TopicsTable = ({ reload, setReload, setLoading }) => {
     // Fetch data here and set it in state
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://gull-upright-actively.ngrok-free.app/topics",
-          {
-            headers: {
-              'ngrok-skip-browser-warning': 'true' // You can set this to any value
-            }
-          });
+        const response = await axios.get("https://trend-backend.onrender.com/topics");
         setData(response.data);
       } catch (err) {
         console.error('Error fetching data:', err);
@@ -42,12 +37,7 @@ const TopicsTable = ({ reload, setReload, setLoading }) => {
   const handleUpdate = async (id) => {
     setLoading(true); // Ensure the correct spelling of setLoading
     try {
-      const response = await axios.post(`https://gull-upright-actively.ngrok-free.app/topic/${id}`,
-        {
-          headers: {
-            'ngrok-skip-browser-warning': 'true' // You can set this to any value
-          }
-        });
+      const response = await axios.post(`https://trend-backend.onrender.com/topic/${id}`);
       const { message } = response.data;
 
       console.log(message);
@@ -75,12 +65,7 @@ const TopicsTable = ({ reload, setReload, setLoading }) => {
 
   const handleDelete = async (id) => {
     setOpen(false);
-    const response = await axios.delete(`https://gull-upright-actively.ngrok-free.app/topic/${id}`,
-      {
-        headers: {
-          'ngrok-skip-browser-warning': 'true' // You can set this to any value
-        }
-      })
+    const response = await axios.delete(`https://trend-backend.onrender.com/topic/${id}`)
     console.log(response.data);
     setReload(!reload);
   };
