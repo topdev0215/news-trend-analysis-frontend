@@ -18,7 +18,7 @@ const TopicTable = ({ id, month }) => {
         // Fetch data here and set it in state
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://trend-backend-b3ov.onrender.com/articles', {
+                const response = await axios.get('https://news-trend-analysis-backend.vercel.app/articles', {
                     params: {
                         id: id,
                         month: month

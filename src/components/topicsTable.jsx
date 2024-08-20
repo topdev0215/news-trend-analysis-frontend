@@ -23,7 +23,7 @@ const TopicsTable = ({ reload, setReload, setLoading }) => {
     // Fetch data here and set it in state
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://trend-backend-b3ov.onrender.com/topics");
+        const response = await axios.get("https://news-trend-analysis-backend.vercel.app/topics");
         setData(response.data);
       } catch (err) {
         console.error('Error fetching data:', err);
@@ -37,7 +37,7 @@ const TopicsTable = ({ reload, setReload, setLoading }) => {
   const handleUpdate = async (id) => {
     setLoading(true); // Ensure the correct spelling of setLoading
     try {
-      const response = await axios.post(`https://trend-backend-b3ov.onrender.com/topic/${id}`);
+      const response = await axios.post(`https://news-trend-analysis-backend.vercel.app/topic/${id}`);
       const { message } = response.data;
 
       console.log(message);
@@ -65,7 +65,7 @@ const TopicsTable = ({ reload, setReload, setLoading }) => {
 
   const handleDelete = async (id) => {
     setOpen(false);
-    const response = await axios.delete(`https://trend-backend-b3ov.onrender.com/topic/${id}`)
+    const response = await axios.delete(`https://news-trend-analysis-backend.vercel.app/topic/${id}`)
     console.log(response.data);
     setReload(!reload);
   };

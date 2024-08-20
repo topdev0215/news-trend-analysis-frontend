@@ -19,7 +19,7 @@ const Graph = () => {
         // Fetch data here and set it in state
         const fetchData = async () => {
             try {
-                const response = await axios.get(`https://trend-backend-b3ov.onrender.com/topic/${id}`);
+                const response = await axios.get(`https://news-trend-analysis-backend.vercel.app/topic/${id}`);
                 console.log("this is response==>", response.data);
                 setData(response.data);
             } catch (err) {
